@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -19,6 +20,8 @@ const LoginPage = () => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login data:', formData);
+    // Redirect to explore page after login
+    navigate('/explore');
   };
 
   return (

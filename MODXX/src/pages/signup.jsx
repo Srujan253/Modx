@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const SignupPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,6 +22,8 @@ const SignupPage = () => {
     e.preventDefault();
     // Handle signup logic here
     console.log('Signup data:', formData);
+    // Redirect to explore page after signup
+    navigate('/explore');
   };
 
   return (
@@ -126,5 +129,6 @@ const SignupPage = () => {
     </div>
   );
 };
+
 
 export default SignupPage;
