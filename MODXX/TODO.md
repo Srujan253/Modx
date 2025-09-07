@@ -1,0 +1,5 @@
+- [x] Update App.jsx to implement routing with BrowserRouter, Routes, and Route for /login and /signup
+- [x] Update navbar.jsx to use Link for navigation links and add localStorage persistence for theme
+- [x] Update signup.jsx to add dark mode classes
+- [x] Update login.jsx to use Link for signup link
+- [ ] Test the routing and dark mode functionality
