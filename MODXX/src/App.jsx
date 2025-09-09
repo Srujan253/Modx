@@ -24,6 +24,7 @@ import ProjectCreation from "./pages/projectCreate";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/dashboard";
 import ProjectDetails from "./pages/projectDetails";
+import ProjectTask from "./pages/ProjectTask";
 
 function AppContent() {
   const location = useLocation();
@@ -86,6 +87,14 @@ function AppContent() {
               element={
                 <ProtectedRoute>
                   <GeminiDreamTeam />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/project/:projectId/tasks"
+              element={
+                <ProtectedRoute>
+                  <ProjectTask />
                 </ProtectedRoute>
               }
             />

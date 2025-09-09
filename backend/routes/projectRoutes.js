@@ -1,3 +1,4 @@
+// Get all members of a project (for task assignment UI)
 const express = require("express");
 const router = express.Router();
 const projectController = require("../controller/projectController");
@@ -34,6 +35,7 @@ router.post(
 );
 // Get all project invitations for the logged-in user
 router.get("/invites", protect, projectController.getUserInvites);
+router.get("/:projectId/members", protect, projectController.getProjectMembers);
 
 // Get all projects where user is a member (accepted) or has a pending request
 router.get("/memberships", protect, projectController.getUserMemberships);

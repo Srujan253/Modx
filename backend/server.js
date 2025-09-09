@@ -39,6 +39,10 @@ app.use("/api/v1/gemini", geminiRoutes);
 const messageRoutes = require("./routes/messageRoutes");
 app.use("/api/v1/messages", messageRoutes);
 
+// Task API route
+const taskRoutes = require("./routes/taskRoutes");
+app.use("/api/v1/project", taskRoutes);
+
 // Serve uploaded images statically
 app.use("/api/v1/uploads", express.static(path.join(__dirname, "uploads")));
 
